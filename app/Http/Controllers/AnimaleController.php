@@ -45,6 +45,12 @@ class AnimaleController extends Controller
     {
         request()->validate(Animale::$rules);
 
+        $request->validate([
+            'nombre' => 'required|string|max:20|alpha',
+            'propietario' => 'required|string|max:20|alpha',
+            'telefono' => 'required|integer|max:999999999',
+        ]);
+
         $animale = Animale::create($request->all());
 
         return redirect()->route('animales.index')
@@ -87,6 +93,12 @@ class AnimaleController extends Controller
     public function update(Request $request, Animale $animale)
     {
         request()->validate(Animale::$rules);
+
+        $request->validate([
+            'nombre' => 'required|string|max:20|alpha',
+            'propietario' => 'required|string|max:20|alpha',
+            'telefono' => 'required|integer|max:999999999',
+        ]);
 
         $animale->update($request->all());
 

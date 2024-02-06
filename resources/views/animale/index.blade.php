@@ -18,7 +18,7 @@
 
                              <div class="float-right">
                                 <a href="{{ route('animales.create') }}" class="btn btn-primary btn-sm float-right"  data-placement="left">
-                                  {{ __('Create New') }}
+                                  {{ __('Nuevo Registro') }}
                                 </a>
                               </div>
                         </div>
@@ -34,7 +34,7 @@
                             <table class="table table-striped table-hover">
                                 <thead class="thead">
                                     <tr>
-                                        <th>No</th>
+                                        <th>N°</th>
                                         
 										<th>Nombre</th>
 										<th>Propietario</th>
